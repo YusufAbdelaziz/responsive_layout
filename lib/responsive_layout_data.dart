@@ -47,7 +47,7 @@ class ResponsiveLayoutData {
   //     _mediaQuerySize(context).height < 750;
 
   static bool _isLargeMobile(BoxConstraints constraints) =>
-      constraints.maxWidth < kTabletBreakpoint && constraints.maxWidth >= 750;
+      constraints.maxWidth < kTabletBreakpoint;
 
   static bool _isTablet(BoxConstraints constraints) =>
       constraints.maxWidth >= kTabletBreakpoint;
