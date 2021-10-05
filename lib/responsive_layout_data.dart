@@ -4,6 +4,7 @@ enum DeviceType { smallMobile, largeMobile, tablet, desktop }
 
 const kTabletBreakpoint = 768.0;
 const kDesktopBreakpoint = 1100.0;
+const kSmallMobileBreakPoint = 340;
 
 class ResponsiveLayoutData {
   static late ResponsiveLayoutData _instance;
@@ -21,9 +22,9 @@ class ResponsiveLayoutData {
 
   static void init(
       {Orientation orientation = Orientation.portrait,
-      required BuildContext context,
-      required BoxConstraints constraints,
-      required PlatformFactor platformFactor}) {
+        required BuildContext context,
+        required BoxConstraints constraints,
+        required PlatformFactor platformFactor}) {
     _instance = ResponsiveLayoutData._()
       .._orientation = orientation
       .._factor = _definePlatformFactor(constraints, platformFactor)
@@ -47,7 +48,8 @@ class ResponsiveLayoutData {
   //     _mediaQuerySize(context).height < 750;
 
   static bool _isLargeMobile(BoxConstraints constraints) =>
-      constraints.maxWidth < kTabletBreakpoint;
+      constraints.maxWidth < kTabletBreakpoint &&
+          constraints.maxWidth >= kSmallMobileBreakPoint;
 
   static bool _isTablet(BoxConstraints constraints) =>
       constraints.maxWidth >= kTabletBreakpoint;
