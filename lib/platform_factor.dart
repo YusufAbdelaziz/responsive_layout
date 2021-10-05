@@ -9,6 +9,6 @@ class PlatformFactor {
   const PlatformFactor(
       {this.desktop = 2.5,
       this.tablet = 1.8,
-      this.smallMobile = 1,
-      this.largeMobile = 1.25});
+      this.smallMobile = 0.85,
+      this.largeMobile = 1});
 }
