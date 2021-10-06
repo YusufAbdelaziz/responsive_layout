@@ -27,8 +27,8 @@ class ResponsiveLayoutBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       final orientation = constraints.maxHeight > constraints.maxWidth
-          ? Orientation.landscape
-          : Orientation.portrait;
+          ? Orientation.portrait
+          : Orientation.landscape;
       if (init) {
         ResponsiveLayoutData.init(
             constraints: constraints,
