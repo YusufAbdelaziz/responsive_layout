@@ -1,17 +1,17 @@
 part of 'responsive_layout.dart';
 
-typedef Builder = Widget Function(
+typedef _Builder = Widget Function(
   BuildContext context,
   BoxConstraints constraints,
 );
 
 class ResponsiveLayoutBuilder extends StatelessWidget {
   final BuildContext context;
-  final Builder mobile;
+  final _Builder mobile;
   final PlatformFactor? platformFactor;
   final bool init;
-  final Builder? tablet;
-  final Builder? desktop;
+  final _Builder? tablet;
+  final _Builder? desktop;
 
   const ResponsiveLayoutBuilder({
     Key? key,
