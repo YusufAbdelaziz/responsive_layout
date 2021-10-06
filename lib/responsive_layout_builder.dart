@@ -32,7 +32,6 @@ class ResponsiveLayoutBuilder extends StatelessWidget {
       if (init) {
         ResponsiveLayoutData.init(
             constraints: constraints,
-            context: context,
             orientation: orientation,
             platformFactor: platformFactor ?? const PlatformFactor());
       }

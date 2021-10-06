@@ -22,7 +22,6 @@ class ResponsiveLayoutData {
 
   static void init(
       {Orientation orientation = Orientation.portrait,
-        required BuildContext context,
         required BoxConstraints constraints,
         required PlatformFactor platformFactor}) {
     _instance = ResponsiveLayoutData._()
@@ -43,9 +42,6 @@ class ResponsiveLayoutData {
 
   double get screenWidth => _instance._constraints.maxWidth;
 
-  // static bool _isSmallMobile(BuildContext context) =>
-  //     _mediaQuerySize(context).width < kTabletBreakpoint &&
-  //     _mediaQuerySize(context).height < 750;
 
   static bool _isLargeMobile(BoxConstraints constraints) =>
       constraints.maxWidth < kTabletBreakpoint &&
